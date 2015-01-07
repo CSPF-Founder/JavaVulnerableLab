@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/admin.jsp
+Disallow: /admin/manageusers.jsp
+Disallow: /admin/AddPage.jsp
+Disallow: /admin/AddPage.do
+Disallow: /admin/Configure.jsp
+Disallow: /header.jsp
+Disallow: /myprofile.jsp
+Disallow: /footer.jsp

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<users>
+    <user id="1">        
+        <name>NEO</name>
+        <username>neo</username>
+        <password>trinity</password>
+        <email>neo@matrix</email>
+         <about> I am the NEO</about>
+    </user>
+    <user id="2">        
+        <name>Trinity</name>
+        <username>trinity</username>
+        <password>neo</password>
+        <email>trinity@matrix</email>
+        <about>it is Trinity</about>
+    </user>
+    <user id="3">        
+        <name>Oracle</name>
+        <username>oracle</username>
+        <password>java</password>
+    </user>
+    <user id="4">        
+        <name>Anderson</name>
+        <username>anderson</username>
+        <password>java</password>
+        <email>anderson@1999</email>
+        <about>Computer Programmer</about>
+    </user>
+</users>
