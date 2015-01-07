@@ -6,3 +6,5 @@ The full course on Hacking and Securing Web Java Programs is available in
 https://www.udemy.com/hacking-securing-java-web-programming/
 
 
+Get the VulnerableSpring Project from here:
+https://github.com/breakthesec/VulnerableSpring
