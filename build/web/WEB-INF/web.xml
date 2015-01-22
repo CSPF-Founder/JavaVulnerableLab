@@ -44,6 +44,10 @@
         <servlet-name>XPathQuery</servlet-name>
         <servlet-class>controller.XPathQuery</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>xxe</servlet-name>
+        <servlet-class>controller.xxe</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>install</servlet-name>
         <url-pattern>/install</url-pattern>
@@ -87,5 +91,9 @@
     <servlet-mapping>
         <servlet-name>XPathQuery</servlet-name>
         <url-pattern>/XPathQuery.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>xxe</servlet-name>
+        <url-pattern>/vulnerability/Injection/xxe.do</url-pattern>
     </servlet-mapping>
 </web-app>

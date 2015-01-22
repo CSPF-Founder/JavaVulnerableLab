@@ -4,7 +4,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Connection"%>
 <%@ include file="header.jsp" %>
-  <script src="jquery.min.js" type="text/javascript"></script>  
      <script type="text/javascript">  
               $(document).ready(function(){  
                   $("#username").change(function(){  

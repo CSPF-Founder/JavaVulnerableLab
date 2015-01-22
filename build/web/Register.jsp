@@ -4,7 +4,6 @@
     Author     : breakthesec
 --%>
  <%@ include file="header.jsp" %>
- <script src="jquery.min.js" type="text/javascript"></script>  
      <script type="text/javascript">  
               $(document).ready(function(){  
                   $("#username").change(function(){  

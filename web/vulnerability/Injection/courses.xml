@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course-details>
+        <title>Hacking and Securing Java based Web Applications </title>
+        <url>https://www.udemy.com/hacking-securing-java-web-programming/</url>
+    </course-details>
+    <course-details>
+        <title>Hacking and Securing PHP Applications </title>
+        <url>https://www.udemy.com/hacking-securing-php/</url>
+    </course-details>
+    <course-details>
+        <title>Certified White Hat Hacker</title>
+        <url>https://www.udemy.com/certified-whitehat-hacker-level-1/</url>
+    </course-details>
+    <course-details>
+        <title>Certified APT Defender </title>
+        <url>https://www.udemy.com/certified-apt-defender/</url>
+    </course-details>
+</courses>

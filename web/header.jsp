@@ -15,6 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title><%=siteTitle%></title>
 	<link rel="stylesheet" href="<%=path%>/style.css" type="text/css" charset="utf-8" />
+           <% out.print("<script src=\""+path+"/jquery.min.js\" type=\"text/javascript\"></script>"); %>
 </head>
 
 <body>
@@ -37,6 +38,13 @@
                                                 <li><a href="#">XPath Injection</a>
                                                  <ul>
 						  <li><a href="<%=path%>/vulnerability/Injection/xpath_login.jsp">Login Bypass</a></li>
+                                                 </ul>
+                                                </li>
+                                                  <li><a href="#">XML Injection</a>
+                                                 <ul>
+						  <li><a href="<%=path%>/vulnerability/Injection/xxe.jsp">External Entity</a></li>
+                                                  <li><a href="<%=path%>/vulnerability/Injection/xslt.jsp?style=1.xsl">XSLT Injection</a></li>
+                                                 
                                                  </ul>
                                                 </li>
 					</ul>
