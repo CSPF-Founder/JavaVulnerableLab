@@ -1,0 +1,105 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+ <servlet>
+        <servlet-name>Install</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.Install</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>loginValidator</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.LoginValidator</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.Register</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Open</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.Open</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendMessage</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.SendMessage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ForwardMe</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.ForwardMe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddPage</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.AddPage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsernameCheck</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.UsernameCheck</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EmailCheck</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.EmailCheck</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>XPathQuery</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.XPathQuery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>xxe</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.xxe</servlet-class>
+    </servlet>
+   
+    <servlet-mapping>
+        <servlet-name>Install</servlet-name>
+        <url-pattern>/Install</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginValidator</servlet-name>
+        <url-pattern>/LoginValidator</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/AddUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Open</servlet-name>
+        <url-pattern>/Open</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendMessage</servlet-name>
+        <url-pattern>/SendMessage.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForwardMe</servlet-name>
+        <url-pattern>/ForwardMe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPage</servlet-name>
+        <url-pattern>/admin/AddPage.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsernameCheck</servlet-name>
+        <url-pattern>/UsernameCheck.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmailCheck</servlet-name>
+        <url-pattern>/EmailCheck.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>XPathQuery</servlet-name>
+        <url-pattern>/XPathQuery.do</url-pattern>
+    </servlet-mapping>
+   <servlet-mapping>
+        <servlet-name>xxe</servlet-name>
+        <url-pattern>/xxe.do</url-pattern>
+    </servlet-mapping>
+   
+</web-app>
