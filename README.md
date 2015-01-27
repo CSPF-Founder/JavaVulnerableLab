@@ -11,7 +11,7 @@ https://www.udemy.com/hacking-securing-java-web-programming/
 How to Use/Setup ?
 -------------
 
-**1.Very Easiest Method : VirtualBox VM**
+**Method 1.Very Easiest Method : VirtualBox VM**
   The Most easiest way to use Java Vulnerable is using the VirtualBox VM which has everything set up and ready to use. 
   
   Steps:
@@ -28,7 +28,7 @@ How to Use/Setup ?
       10. Click the Install Button
       11. Enjoy :)
       
-**2.Easiest Method : Standalone Web Application**
+**Method 2.Easiest Method : Standalone Web Application**
   In this mehtod, you will be running an executable "JAR" file which runs the application with an embedded Apache Tomcat. 
  
     Steps:
@@ -39,7 +39,7 @@ How to Use/Setup ?
         4. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp 
         5. Click the Install Button
         
-**3. Using War file:**
+**Method 3. Using War file:**
   This is a NORMAL method to deploy the WAR file. 
   
   Steps:
