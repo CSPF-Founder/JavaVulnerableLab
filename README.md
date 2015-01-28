@@ -34,7 +34,7 @@ How to Use/Setup ?
     Steps:
     
         1. Install JDK
-        2. Download Executable Jar from here: http://sourceforge.net/projects/javavulnerablelab/files/v0.1/JavaVulnerableLab.jar/download
+        2. Download Executable Jar from here: http://sourceforge.net/projects/javavulnerablelab/files/v0.2/JavaVulnerableLab.jar/download
         3. Double Click the JavaVulnerable.jar to run( if double click is not working, run this command "java -jar JavaVulnerable.jar" in your Terminal or CMD)
         4. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp 
         5. Click the Install Button
