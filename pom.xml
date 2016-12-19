@@ -7,6 +7,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>JavaVulnerableLab Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <jetty-version>9.4.0.v20161208</jetty-version>
+      <spring.version>4.0.2.RELEASE</spring.version>
+      <!-- <sonar.language></sonar.language> -->
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -39,9 +45,65 @@
     <artifactId>servlet-api</artifactId>
     <version>2.3</version>
     <scope>provided</scope>
-</dependency>	 	
+</dependency>
+<!-- Jetty -->
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-annotations</artifactId>
+            <version>${jetty-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>apache-jsp</artifactId>
+            <version>${jetty-version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>apache-jstl</artifactId>
+            <version>${jetty-version}</version>
+            <type>pom</type>
+        </dependency>
+
+
+        <!-- Spring Web MVC (Include Tag Lib) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+            <type>jar</type>
+        </dependency>
   </dependencies>
   <build>
     <finalName>JavaVulnerableLab</finalName>
+    <plugins>
+      <plugin>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-jspc-maven-plugin</artifactId>
+          <version>${jetty-version}</version> <!-- Latest version -->
+          <executions>
+              <execution>
+                  <id>jspc</id>
+                  <goals>
+                      <goal>jspc</goal>
+                  </goals>
+                  <configuration>
+                      <jspc>
+                          <smapSuppressed>false</smapSuppressed>
+                          <smapDumped>true</smapDumped>
+                      </jspc>
+                      <keepSources>true</keepSources>
+                      <useProvidedScope>true</useProvidedScope>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>
