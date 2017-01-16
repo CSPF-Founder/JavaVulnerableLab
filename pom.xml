@@ -11,6 +11,7 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <jetty-version>9.4.0.v20161208</jetty-version>
       <spring.version>4.0.2.RELEASE</spring.version>
+      <tomcat.version>8.0.28</tomcat.version>
       <!-- <sonar.language></sonar.language> -->
   </properties>
   <dependencies>
@@ -84,6 +85,11 @@
     <finalName>JavaVulnerableLab</finalName>
     <plugins>
       <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-version}</version>
+      </plugin>
+      <plugin>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-jspc-maven-plugin</artifactId>
           <version>${jetty-version}</version> <!-- Latest version -->
@@ -103,6 +109,23 @@
                   </configuration>
               </execution>
           </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>1.4.4</version>
+        <configuration>
+          <skipProvidedScope>true</skipProvidedScope>
+          <skipRuntimeScope>true</skipRuntimeScope>
+          <format>xml</format>
+        </configuration>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>check</goal>
+                </goals>
+            </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
