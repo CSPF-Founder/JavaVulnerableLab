@@ -115,8 +115,6 @@
         <artifactId>dependency-check-maven</artifactId>
         <version>1.4.4</version>
         <configuration>
-          <skipProvidedScope>true</skipProvidedScope>
-          <skipRuntimeScope>true</skipRuntimeScope>
           <format>xml</format>
         </configuration>
         <executions>
