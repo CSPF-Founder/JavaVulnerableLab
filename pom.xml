@@ -84,25 +84,6 @@
   <build>
     <finalName>JavaVulnerableLab</finalName>
     <plugins>
-    <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.4</version>
-        <configuration>
-            <effort>Max</effort>
-            <threshold>Low</threshold>
-            <failOnError>true</failOnError>
-            <includeFilterFile>${session.executionRootDirectory}/findbugs-security-include.xml</includeFilterFile>
-            <excludeFilterFile>${session.executionRootDirectory}/findbugs-security-exclude.xml</excludeFilterFile>
-            <plugins>
-                <plugin>
-                    <groupId>com.h3xstream.findsecbugs</groupId>
-                    <artifactId>findsecbugs-plugin</artifactId>
-                    <version>LATEST</version> <!-- Auto-update to the latest stable -->
-                </plugin>
-            </plugins>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
