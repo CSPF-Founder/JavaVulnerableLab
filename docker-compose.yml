@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+        db:
+                image: mysql:5.7
+                environment:
+                        MYSQL_ROOT_PASSWORD: root
+        tomcat:
+                build: .
+                ports:
+                        - 8080:8080
+                        - 3306:3306
+                depends_on:
+                        - db
