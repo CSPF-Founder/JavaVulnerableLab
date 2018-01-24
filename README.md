@@ -16,11 +16,12 @@ How to Use/Setup ?
 
   Steps:
 
-     1. Install [Docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/).
-     2. Inside this directory, run `sudo docker-compose up` and wait untill everything is configured for you.
-     3. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp
-     4. Click the Install Button
-     5. Enjoy :)
+     1. Install Docker: https://docs.docker.com/engine/installation/ 
+     2. Install docker-compose: https://docs.docker.com/compose/install/
+     3. Inside this directory, run `sudo docker-compose up` and wait untill everything is configured for you.
+     4. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp
+     5. Click the Install Button
+     6. Enjoy :)
 
 
 **Method 2.Very Easiest Method : VirtualBox VM**
