@@ -1,0 +1,13 @@
+javavulnlab:
+  build: .
+  ports:
+    - 8080:8080
+  net: host
+
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+  net: host
+  ports:
+    - 3306:3306
