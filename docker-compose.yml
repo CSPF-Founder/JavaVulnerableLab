@@ -1,11 +1,16 @@
-javavulnlab:
-  build: .
-  ports:
-    - 8080:8080
-  links: 
-    - mysql
-
-mysql:
-  image: mysql
-  environment:
-    - MYSQL_ROOT_PASSWORD=root
+version: "3"
+services:
+  javavulnlab:
+    build:
+      context: .
+      args:
+        org: "${ORG}"
+        token: "${TOKEN}"
+    ports:
+      - 8080:8080
+    links:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
