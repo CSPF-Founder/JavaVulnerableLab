@@ -7,26 +7,26 @@ and open the template in the editor.
 
 
 <users>
-    <user id="1">        
+    <user id="1">
         <name>NEO</name>
         <username>neo</username>
         <password>trinity</password>
         <email>neo@matrix</email>
-         <about> I am the NEO</about>
+        <about>I am the NEO</about>
     </user>
-    <user id="2">        
+    <user id="2">
         <name>Trinity</name>
         <username>trinity</username>
         <password>neo</password>
         <email>trinity@matrix</email>
         <about>it is Trinity</about>
     </user>
-    <user id="3">        
+    <user id="3">
         <name>Oracle</name>
         <username>oracle</username>
         <password>java</password>
     </user>
-    <user id="4">        
+    <user id="4">
         <name>Anderson</name>
         <username>anderson</username>
         <password>java</password>

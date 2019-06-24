@@ -1,10 +1,10 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
 
- <servlet>
+    <servlet>
         <servlet-name>Install</servlet-name>
         <servlet-class>org.cysecurity.cspf.jvl.controller.Install</servlet-class>
     </servlet>
@@ -52,7 +52,7 @@
         <servlet-name>xxe</servlet-name>
         <servlet-class>org.cysecurity.cspf.jvl.controller.xxe</servlet-class>
     </servlet>
-   
+
     <servlet-mapping>
         <servlet-name>Install</servlet-name>
         <url-pattern>/Install</url-pattern>
@@ -97,9 +97,9 @@
         <servlet-name>XPathQuery</servlet-name>
         <url-pattern>/XPathQuery.do</url-pattern>
     </servlet-mapping>
-   <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>xxe</servlet-name>
         <url-pattern>/xxe.do</url-pattern>
     </servlet-mapping>
-   
+
 </web-app>
