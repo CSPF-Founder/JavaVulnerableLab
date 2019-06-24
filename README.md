@@ -11,9 +11,24 @@ https://www.udemy.com/hacking-securing-java-web-programming/
 
 **Warning**: Don't run this app in Your Main Machine or in  an online server.  Install it in Vitual Machine.
 
+
+## How to run Sonarcloud scan on this project
+
+This section describes an easy way to run Sonar scans and upload them to Sonarcloud.
+
+### Setup
+* Login at [Sonarcloud](https://sonarcloud.io) with a Github account
+  * Note: you will have to allow Sonarcloud to read your repository
+  * The free (Lite) plan of Sonarcloud allows you to scan opensource projects
+* Generate a key for this project
+  * Use the parameters supplied in the Maven CLI command by Sonarcloud to configure a sonar.properties file based on the sonar-example.properties in this project
+
+### Running Sonar
+The Sonar goal for this project is configured to run on the Maven ```test``` phase. It will run when you: 
+* Run ```mvn test```
+
  
-How to Use/Setup ?
--------------
+## How to Use / Setup ?
 
 **Method 1.Super Very Easiest Method: Docker**
   The easiest way to use Java Vulnerable is using Docker which set up everything for you with 1 command line
