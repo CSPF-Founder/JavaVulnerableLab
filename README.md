@@ -4,21 +4,15 @@ This is a "Vulnerable" Web Application developed by Cyber Security and Privacy F
 
 ## Prerequisites:
 
-- git
-- docker docker-compose
-- vagrant
+- [git](https://git-scm.com/downloads)
+- with [Docker](https://docs.docker.com/install/), [docker-compose](https://docs.docker.com/compose/install/) and [Vagrant](https://www.vagrantup.com/docs/installation/)
+- or [JDK8+](https://openjdk.java.net/install/), [Maven](http://maven.apache.org/install.html) and [tomcat 8](https://tomcat.apache.org/tomcat-8.5-doc/setup.html)
 
 ## Deploy it
 
-1. Using Docker to run on a machine :
+There are many easy way to deploy this application.
 
-```sh
-git clone https://github.com/softwaresecured/JavaVulnerableLab.git
-cd JavaVulnerableLab
-docker-compose up
-```
-
-2. Using Vagrant to run this application in a VM (containers are launched inside it) :
+1. Using Vagrant to run this application in a VM (containers are launched inside it, as describe in option #2) :
 
 ```sh
 git clone https://github.com/softwaresecured/JavaVulnerableLab.git
@@ -26,29 +20,26 @@ cd JavaVulnerableLab
 vagrant up
 ```
 
+2. Using Docker to run on a machine :
+
+```sh
+git clone https://github.com/softwaresecured/JavaVulnerableLab.git
+cd JavaVulnerableLab
+docker-compose up -d javavulnlab mysql
+```
+
 3. If not using Docker at all, you'll need to the JDBC URL in `config.properties` and `install.jsp` from :
 
 ```
-dburl=jdbc:mysql://mysql:3306/
-```
-
-to this :
-
-```
-jdbc:mysql://localhost:3306 
+dburl=jdbc:mysql://mysql:3306/  => jdbc:mysql://localhost:3306 
 ```
 
 4. If you want to play with it on a VPS, you'll need to the JDBC URL in `config.properties` and `install.jsp` from :
                                       
 ```
-dburl=jdbc:mysql://mysql:3306/
+dburl=jdbc:mysql://mysql:3306/  => jdbc:mysql://SERVER_HOSTNAME_OR_IP_ADDRESS:3306 
 ```
 
-to this :
-
-```
-jdbc:mysql://IP_ADDRESS:3306 
-```
 And the link at next step will require the server hostname or IP address.
 
 5. You already have a tomcat, and want to deploy the application with a war. 
@@ -65,9 +56,11 @@ And the link at next step will require the server hostname or IP address.
 
 2. And click on `Install` button, by leaving default values as-is.
 
-## Vulnerabilties Metrics
+## Vulnerabilities Scan
 
-OWASP comes with a Zed Attack Proxy (ZAP) tool to scan the vulnerabilities. We can use a ZAP Plugin for SonarQube 7.x to do just that. If you are interested in doing so, please refer to [this](./sonarqube/sonarqube.md) 
+The Open Web Application Security Project (OWASP) team recommends many [tools](https://www.owasp.org/index.php/Appendix_A:_Testing_Tools) to address security matters. 
+One of the most popular is the OWASP `Zed Attack Proxy` (**ZAP**) tool to scan the vulnerabilities. please refer to [this guideline](docs/owasp-zap.md). 
+Also, if you need to automate everything in your Continuous Integration and Continuous Delivery (**CI/CD**) toolchain, you can go through this [this guideline](docs/sonarqube.md).
 
 ## Notes
 

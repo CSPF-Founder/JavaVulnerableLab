@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     cd /vagrant
     /usr/local/bin/docker-compose down
     /usr/local/bin/docker-compose build
-    /usr/local/bin/docker-compose up -d
+    /usr/local/bin/docker-compose up -d javavulnlab mysql
   SHELL
 
  end
