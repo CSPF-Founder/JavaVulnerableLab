@@ -1,10 +1,11 @@
-# Java Vulnerabilities Experiment
+# Java Vulnerabilities Lab
 
-This is a "Vulnerable" Web Application developed by Cyber Security and Privacy Foundation(www.cysecurity.org). This app is intended for the Java Programmers and other people who wish to learn about Web application vulnerabilities and write secure code.
+This is a **vulnerable** Web Application developed by [Cyber Security and Privacy Foundation](www.cysecurity.org). 
+This app is intended for the Java Developers and other people who wish to learn about Web Application vulnerabilities or simply write secure code because they are concerned about security - and **`everyone should!`**.
 
 ## Prerequisites:
 
-- [git](https://git-scm.com/downloads)
+- [Git](https://git-scm.com/downloads)
 - with [Docker](https://docs.docker.com/install/), [docker-compose](https://docs.docker.com/compose/install/) and [Vagrant](https://www.vagrantup.com/docs/installation/)
 - or [JDK8+](https://openjdk.java.net/install/), [Maven](http://maven.apache.org/install.html) and [tomcat 8](https://tomcat.apache.org/tomcat-8.5-doc/setup.html)
 
@@ -58,9 +59,9 @@ And the link at next step will require the server hostname or IP address.
 
 ## Vulnerabilities Scan
 
-The Open Web Application Security Project (OWASP) team recommends many [tools](https://www.owasp.org/index.php/Appendix_A:_Testing_Tools) to address security matters. 
-One of the most popular is the OWASP `Zed Attack Proxy` (**ZAP**) tool to scan the vulnerabilities. please refer to [this guideline](docs/owasp-zap.md). 
-Also, if you need to automate everything in your Continuous Integration and Continuous Delivery (**CI/CD**) toolchain, you can go through this [this guideline](docs/sonarqube.md).
+The Open Web Application Security Project (OWASP) team recommends many [tools](https://www.owasp.org/index.php/Appendix_A:_Testing_Tools) to address security matters, allowing to scan the vulnerabilities of Web Applications.
+One of the most popular is OWASP `Zed Attack Proxy` (**ZAP**). Please refer to this [guideline](docs/owasp-zap.md) for more details.
+Also, if you need to automate everything in your Continuous Integration and Continuous Delivery (**CI/CD**) toolchain, you can go through this [guideline](docs/sonarqube.md).
 
 ## Notes
 
@@ -68,7 +69,7 @@ Also, if you need to automate everything in your Continuous Integration and Cont
 
 https://www.udemy.com/hacking-securing-java-web-programming/
 
-**Warning**: It's not recommanded to run this app in `Your Main Machine` or in an `online server`.  Prefer using Docker or a VM (vagrant).
+**Warning**: It's not recommended to run this app in `Your Main Machine` or in an `online server`.  Prefer using Docker or a VM (vagrant).
 
 You can also get the VulnerableSpring Project from [here](https://github.com/CSPF-Founder/VulnerableSpring).
 

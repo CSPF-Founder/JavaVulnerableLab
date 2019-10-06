@@ -34,4 +34,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     /usr/local/bin/docker-compose up -d javavulnlab mysql
   SHELL
 
+  config.vm.provision "sonar", type: "shell", inline: <<-SHELL
+    cd /vagrant
+    /usr/local/bin/docker-compose up -d sonarqube
+    sleep 10
+    /bin/docker exec vagrant_javavulnlab_1 mvn sonar:sonar -Dsonar.host.url=http://192.168.10.10:9000
+  SHELL
+
  end

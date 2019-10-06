@@ -48,14 +48,36 @@ docker-compose up -d sonarqube
 
 Run this command to analyse the codebase :
 
+If using Vagrant :
+
+```sh
+vagrant ssh
+sudo su -
+cd /vagrant
+docker-compose up -d sonarqube
+sleep 5
+docker exec vagrant_javavulnlab_1 mvn sonar:sonar -Dsonar.host.url=http://192.168.10.10:9000
+```
+
+If SonarQube is running inside a container on a VM :
+
+```sh
+docker exec javavulnerablelab_javavulnlab_1 mvn sonar:sonar -Dsonar.host.url=http://HOSTNAME_OR_IP_ADDRESS:9000
+```
+
+If you are directly on a machine :
+
 ```sh
 mvn sonar:sonar
 ```
 
-It connects to the SonarQube server to retrieve information, such as rules and plugins to apply while scanning the code.
+Here, by default it connects to http://localhost:9000.
+
+It connects to the SonarQube server to retrieve information, such as rules and plugins to apply while scanning the code. 
+Once the scan is completed, the resulting metrics are sent to the SonarQube server. Then you may see the dashboard [here](http://localhost:9000).
 
 ## Quality Metrics
 
-Once this is done, we can see the metrics on SonarQube [Dashboard](http://127.0.0.1:9000/project/issues?id=org.cysecurity%3AJavaVulnerableLab&resolved=false&sonarsourceSecurity=sql-injection&types=SECURITY_HOTSPOT)
+Once this is done, we can see the [vulnerabilities](http://127.0.0.1:9000/project/issues?id=org.cysecurity%3AJavaVulnerableLab&resolved=false&sonarsourceSecurity=sql-injection&types=SECURITY_HOTSPOT) metrics on SonarQube.
 
 ![Alt Text](assets/Java-SonarQube-OWASP-Vulnerabilities.png)

@@ -1,7 +1,7 @@
 # OWASP Zap Tool
 
 The Open Web Application Security Project (OWASP) provides a security tool, called `Zed Attack Proxy` (**ZAP**) to scan the vulnerabilities.
-OWASP ZAP is one of the most popular security tools and is actively maintained. It comes with a UI and it allows to launch an automated scan against a URL of a web application - for example [http://localhost:8080](http://localhost:8080).
+OWASP ZAP is one of the most popular security tools and is actively maintained. It comes with a UI and it allows to launch an automated scan against a URL of a web application - for example [http://localhost:8080/JavaVulnerableLab](http://localhost:8080/JavaVulnerableLab).
 
 ![Alt Text](assets/owasp-zap-2.8.0-screenshot.png)
 
