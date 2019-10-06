@@ -65,6 +65,10 @@ And the link at next step will require the server hostname or IP address.
 
 2. And click on `Install` button, by leaving default values as-is.
 
+## Vulnerabilties Metrics
+
+OWASP comes with a Zed Attack Proxy (ZAP) tool to scan the vulnerabilities. We can use a ZAP Plugin for SonarQube 7.x to do just that. If you are interested in doing so, please refer to [this](./sonarqube/sonarqube.md) 
+
 ## Notes
 
 **The full course on Hacking and Securing Web Java Programs is available in** 
