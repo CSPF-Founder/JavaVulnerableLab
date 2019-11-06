@@ -50,6 +50,7 @@ public class LoginValidator extends HttpServlet {
                                {
                                    ResultSet rs=null;
                                    PreparedStatement  stmt = con.prepareStatement("select * from users where username= ? and password=?");
+                                   
                                    stmt.setString(1, user);
                                    stmt.setString(2, pass);
                                    stmt.executeQuery();
