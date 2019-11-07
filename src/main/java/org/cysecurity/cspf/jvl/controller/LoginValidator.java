@@ -75,8 +75,13 @@ public class LoginValidator extends HttpServlet {
                                    {
                                           response.sendRedirect("ForwardMe?location=/login.jsp&err=Invalid Username or Password");
                                    }
-                                    
-                               }
+                                   ResultSet rs=null;
+                                   Statement stmt = con.createStatement();
+                                   rs=stmt.executeQuery("select * from users where username='"+user+"'");
+                                   if (rs.next())
+                                   {
+                                        //do nothing
+                                   }
                 }
                catch(Exception ex)
                 {
