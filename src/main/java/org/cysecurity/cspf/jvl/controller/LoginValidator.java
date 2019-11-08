@@ -92,8 +92,11 @@ public class LoginValidator extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+        ResultSet rs=null;
+        Statement stmt = con.createStatement();
+        rs=stmt.executeQuery("select * from users where username='"+user+"' and password='"+pass+"'");
+        if(rs != null && rs.next()){
+        }
 
     /**
      * Handles the HTTP <code>POST</code> method.
