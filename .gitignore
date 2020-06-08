@@ -1,0 +1,57 @@
+
+# Created by https://www.gitignore.io/api/vim,java,maven,eclipse,code-java
+
+.vagrant
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/build/
+
+### VS Code ###
+.vscode/
+
+### Eclipse ###
+.classpath
+.factorypath
+.project
+.settings
+.metadata
+.springBeans
+.sts4-cache
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.launch
+
+### Java ###
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Maven ###
+target/
+
+### Vim ###
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+Session.vim
+
+# End of https://www.gitignore.io/api/vim,java,maven,eclipse,code-java

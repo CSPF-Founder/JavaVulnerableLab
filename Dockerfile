@@ -1,9 +1,14 @@
 FROM tomcat
 
-COPY . .
+COPY . /code
+WORKDIR /code
 
-RUN apt-get update ; apt-get install maven default-jdk -y ; update-alternatives --config javac
+RUN apt-get update \
+    && apt-get install -y \
+        maven \
+        openjdk-8-jdk
 
-RUN mvn clean package ; cp target/*.war /usr/local/tomcat/webapps/
+RUN mvn clean package
+RUN cp target/JavaVulnerableLab.war /usr/local/tomcat/webapps/
 
-CMD ["catalina.sh","run"]
+CMD ["catalina.sh", "run"]
