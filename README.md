@@ -9,7 +9,7 @@ https://github.com/CSPF-Founder/JavaSecurityCourse
 
 https://www.udemy.com/hacking-securing-java-web-programming/
 
-**Warning**: Don't run this app in Your Main Machine or in  an online server.  Install it in Vitual Machine.
+**Warning**: Don't run this app in Your Main Machine or in  an online server. Install it in Vitual Machine.
 
  
 How to Use/Setup ?
