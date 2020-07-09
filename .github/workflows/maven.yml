@@ -25,4 +25,5 @@ jobs:
     - name: Run findSecBugs scan
       run: |
         chmod +x ./findsecbugs-cli-1.10.1/findsecbugs.sh
-        ./findsecbugs-cli-1.10.1/findsecbugs.sh -progress -html -output report.htm target/JavaVulnerableLab.war
+        cd ./findsecbugs-cli-1.10.1
+        ./findsecbugs.sh -progress -html -output report.htm target/JavaVulnerableLab.war
