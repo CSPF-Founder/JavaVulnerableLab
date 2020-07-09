@@ -26,4 +26,4 @@ jobs:
       run: |
         chmod +x ./findsecbugs-cli-1.10.1/findsecbugs.sh
         cd ./findsecbugs-cli-1.10.1
-        ./findsecbugs.sh -progress -html -output report.htm target/JavaVulnerableLab.war
+        ./findsecbugs.sh -progress -html -output report.htm ./target/JavaVulnerableLab.war
