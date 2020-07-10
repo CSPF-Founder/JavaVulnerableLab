@@ -30,3 +30,29 @@ jobs:
       run: |
         chmod +x ./findsecbugs-cli-1.10.1/findsecbugs.sh
         ./findsecbugs-cli-1.10.1/findsecbugs.sh -progress -html -output report.htm ./JavaVulnerableLab.war
+    - name: Retrieve version
+      run: |
+        VERSION=$(git rev-parse --short "$GITHUB_SHA")
+        echo ::set-env name=TAG_NAME::$VERSION
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ env.TAG_NAME }}
+        release_name: Release ${{ env.TAG_NAME }}
+        body: |
+          Reshift Intellij Plugin ${{ env.TAG_NAME }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./report.htm
+        asset_name: findsecbugs-report-${{ env.TAG_NAME }}.htm
+        asset_content_type: text/html
