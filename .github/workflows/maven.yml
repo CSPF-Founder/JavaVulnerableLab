@@ -43,7 +43,7 @@ jobs:
         tag_name: ${{ env.TAG_NAME }}
         release_name: Release ${{ env.TAG_NAME }}
         body: |
-          Reshift Intellij Plugin ${{ env.TAG_NAME }}
+          Java Vulnerable Lab Release ${{ env.TAG_NAME }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
