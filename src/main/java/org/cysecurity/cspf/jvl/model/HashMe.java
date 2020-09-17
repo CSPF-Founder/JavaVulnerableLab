@@ -34,7 +34,7 @@ public class HashMe {
          StringBuffer sb=null;
         try
         {
-            MessageDigest md = MessageDigest.getInstance("MD2");
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(str.getBytes());
             byte byteData[] = md.digest();
             sb= new StringBuffer();
