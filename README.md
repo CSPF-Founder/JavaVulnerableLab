@@ -14,11 +14,11 @@ https://www.udemy.com/hacking-securing-java-web-programming/
  
 How to Use/Setup?
 -------------
-
 **Method 1.Super Very Easiest Method: Docker**
   The easiest way to use Java Vulnerable is using Docker which set up everything for you with 1 command line
 
   Steps:
+  
      1. Install Docker: https://docs.docker.com/engine/installation/ 
      2. Install docker-compose: https://docs.docker.com/compose/install/
      3. Inside this directory, run `sudo docker-compose up` and wait untill everything is configured for you.
@@ -32,6 +32,7 @@ How to Use/Setup?
   The second most easiest way to use Java Vulnerable is using the VirtualBox VM which has everything set up and ready to use. 
   
   Steps:
+  
       1. Install the VirtualBox : https://www.virtualbox.org/wiki/Downloads
       2. Download the VM Image from here : http://sourceforge.net/projects/javavulnerablelab/files/v0.1/JavaVulnerableLab.ova/download
       3. Import the JavaVulnerable.ova into VirtualBox.
@@ -48,6 +49,7 @@ How to Use/Setup?
   In this mehtod, you will be running an executable "JAR" file which runs the application with an embedded Apache Tomcat. 
  
     Steps:
+    
         1. Install JDK
         2. Download Executable Jar from here: http://sourceforge.net/projects/javavulnerablelab/files/v0.2/JavaVulnerableLab.jar/download
         3. Double Click the JavaVulnerable.jar to run( if double click is not working, run this command "java -jar JavaVulnerable.jar" in your Terminal or CMD)
@@ -58,6 +60,7 @@ How to Use/Setup?
   This is a NORMAL method to deploy the WAR file. 
   
   Steps:
+  
        1. Install Apache Tomcat server
        2. Go to http://[Tomcat_INSTALLED_IP]:8080/manager/  (make sure you have modified tomcat-users.xml file of the tomcat to allow the manager).
        3. Download our WAR file from here: https://sourceforge.net/projects/javavulnerablelab/files/latest/JavaVulnerableLab.war/download
