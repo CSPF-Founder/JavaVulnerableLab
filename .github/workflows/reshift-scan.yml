@@ -22,5 +22,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Scan with Reshift Maven CMD
-      run: git status && mvn compile com.softwaresecured.reshift:maven-plugin:LATEST:analyse com.softwaresecured.reshift:maven-plugin:LATEST:upload -Dreshift.token=${{ secrets.RESHIFT_TOKEN }}
+      run: git status && mvn compile com.softwaresecured.reshift:maven-plugin:LATEST:analyse com.softwaresecured.reshift:maven-plugin:LATEST:upload -Dreshift.token=${{ secrets.RESHIFT_TOKEN }} -Dreshift.reshiftURL=${{ secrets.RESHIFT_URL }}
 
