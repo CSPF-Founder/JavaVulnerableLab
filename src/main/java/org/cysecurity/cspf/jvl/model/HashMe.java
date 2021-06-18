@@ -29,12 +29,12 @@ public class HashMe {
         return sb.toString();
     }
     
-    public static String hashThis(String str) 
+    public static String hashingUtility(String str) 
     {
          StringBuffer sb=null;
         try
         {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            MessageDigest md = MessageDigest.getInstance("MD4");
             md.update(str.getBytes());
             byte byteData[] = md.digest();
             sb= new StringBuffer();
