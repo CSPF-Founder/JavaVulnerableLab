@@ -1,5 +1,5 @@
 name: 'Assert Branch Naming Convention'
-on: commit
+on: push
 
 jobs:
   branch-naming-rules:
