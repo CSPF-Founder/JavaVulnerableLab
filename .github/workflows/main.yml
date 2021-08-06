@@ -1,10 +1,11 @@
-name: 'Assert Branch Naming Convention'
+name: 'AJs Template'
 on: push
 
 jobs:
   branch-naming-rules:
     runs-on: ubuntu-latest
     steps:
+    #Assert Branch Naming Convention
       - uses: deepakputhraya/action-branch-name@master
         with:
           regex: '([a-z])+\/([a-z])+' # Regex the branch should match. This example enforces grouping
