@@ -1,5 +1,5 @@
 name: 'AJs Template'
-on: push
+on: [push, pull_request]
 
 jobs:
   branch-naming-rules:
