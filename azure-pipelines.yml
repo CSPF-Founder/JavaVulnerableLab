@@ -20,3 +20,8 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+jobs:
+- job: Test
+  timeoutInMinutes: 2 # how long to run the job before automatically cancelling
+  cancelTimeoutInMinutes: 1 # how much time to give 'run always even if cancelled tasks' before stopping them
