@@ -15,5 +15,5 @@ jobs:
           project_name: Teste_Lino
           cx_tenant: beta_nova8
           base_uri: https://eu.iam.checkmarx.net/ 
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.SECRET }}
+          cx_client_id: Lino
+          cx_client_secret: m7TKbgoqvXppp7xN8CAuGqnOnMxF3sH3
