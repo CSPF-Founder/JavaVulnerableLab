@@ -14,6 +14,6 @@ jobs:
         with:
           project_name: ${{ github.repository }}
           cx_tenant: beta_nova8
-          base_uri: https://iam.checkmarx.net/ 
+          base_uri: https://eu.ast.checkmarx.net
           cx_client_id: ${{ secrets.CXONE_ID }}
           cx_client_secret: ${{ secrets.CXONE_SECRET }}
