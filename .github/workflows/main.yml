@@ -12,8 +12,8 @@ jobs:
       - name: Checkmarx One CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
-          project_name: Nova8-Teste-GithubAction
+          project_name: ${{ github.repository }}
           cx_tenant: unico
           base_uri: https://ast.checkmarx.net/ 
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.UNICO_SECRET }}
+          cx_client_id: ${{ secrets.CXONE_ID }}
+          cx_client_secret: ${{ secrets.CXONE_SECRET }
