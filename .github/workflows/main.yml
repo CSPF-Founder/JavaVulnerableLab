@@ -1,7 +1,8 @@
 name: Checkmarx AST Scan
 
 on:
-  push:
+  pull_request:
+    types: [opened, reopened, synchronize]
     branches:
       - main
       - master
@@ -16,7 +17,8 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main
         with:
-          base_uri: ${{ secrets.BASE_URI }}
+          project_name: ${{ github.repository }}
+          base_uri: https://ast.checkmarx.net
           cx_tenant: ${{ secrets.TENANT }}
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.CLIENT_SECRET }}
