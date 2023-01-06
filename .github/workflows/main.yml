@@ -1,6 +1,11 @@
 name: Checkmarx AST Scan
 
-on: [ pull_request, workflow_dispatch ]
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
 
 jobs:
   cx-scan:
@@ -15,4 +20,3 @@ jobs:
           cx_tenant: ${{ secrets.TENANT }}
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.CLIENT_SECRET }}
-          branch: master
