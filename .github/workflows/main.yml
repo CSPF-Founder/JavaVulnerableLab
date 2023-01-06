@@ -2,8 +2,6 @@ name: Checkmarx AST Scan
 
 on: [ pull_request, workflow_dispatch ]
 
- 
-
 jobs:
   cx-scan:
     runs-on: ubuntu-latest
@@ -17,4 +15,4 @@ jobs:
           cx_tenant: ${{ secrets.TENANT }}
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.CLIENT_SECRET }}
-          additional_params: --tags galactica-team --threshold "sast-high=1"
+          branch: master
