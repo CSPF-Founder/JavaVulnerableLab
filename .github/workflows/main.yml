@@ -12,8 +12,8 @@ jobs:
       - name: Checkmarx One CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
-          project_name: Nova8-Teste-GithubAction
-          cx_tenant: beta_nova8
-          base_uri: https://eu.ast.checkmarx.net/ 
-          cx_client_id: Lino
-          cx_client_secret: eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3MjliOTc0NC05ZTYxLTQ5MjItOTkyYi1kMjQzNTI1ZGViNzIifQ.eyJpYXQiOjE2NzI5MzM0MDEsImp0aSI6ImY0ZmFkOTA3LTM2MzMtNDFiZC05OWQ0LThiZjk2MDc0Mzc0NSIsImlzcyI6Imh0dHBzOi8vZXUuaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvYmV0YV9ub3ZhOCIsImF1ZCI6Imh0dHBzOi8vZXUuaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvYmV0YV9ub3ZhOCIsInN1YiI6IjIyYmU2MzVmLTBlYjEtNDYyZC04ZWZiLTMwODA4YWZlMzZjNiIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJhc3QtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjdhNTlmNGM2LTMwMDAtNGJlMC04YzhiLWY5ZmVmY2VkMTFkMCIsInNjb3BlIjoiIG9mZmxpbmVfYWNjZXNzIiwic2lkIjoiN2E1OWY0YzYtMzAwMC00YmUwLThjOGItZjlmZWZjZWQxMWQwIn0.HukWHudXaivGAfprkE7IS6ROjGotwLteN85WmPAoKJo
+          project_name: ${{ github.repository }}
+          cx_tenant: unico
+          base_uri: https://ast.checkmarx.net/ 
+          cx_client_id: ${{ secrets.CXONE_ID }}
+          cx_client_secret: ${{ secrets.CX_APIKEY }}
