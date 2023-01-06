@@ -1,18 +1,20 @@
-name: Checkmarx One Scan
-on:
-  push:
-    branches:
-      - master
+name: Checkmarx AST Scan
+
+on: [ pull_request, workflow_dispatch ]
+
+ 
+
 jobs:
-  build:
+  cx-scan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Checkmarx One CLI Action
-        uses: checkmarx/ast-github-action@main #Github Action version
+        uses: actions/checkout@v3.3.0
+      - name: Checkmarx AST CLI Action
+        uses: checkmarx/ast-github-action@main
         with:
-          project_name: Nova8-Teste-GithubAction
-          cx_tenant: unico
-          base_uri: https://ast.checkmarx.net
-          super_secret: --apikey=${{ secrets.CX_APIKEY }}
+          base_uri: ${{ secrets.BASE_URI }}
+          cx_tenant: ${{ secrets.TENANT }}
+          cx_client_id: ${{ secrets.CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CLIENT_SECRET }}
+          additional_params: --tags galactica-team --threshold "sast-high=1"
