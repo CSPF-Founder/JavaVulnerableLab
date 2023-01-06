@@ -15,4 +15,4 @@ jobs:
           project_name: Nova8-Teste-GithubAction
           cx_tenant: unico
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey=${{ CX_APIKEY.APIKEY }}
+          additional_params: --apikey=${{ secrets.CX_APIKEY }}
