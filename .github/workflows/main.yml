@@ -15,5 +15,5 @@ jobs:
           project_name: ${{ github.repository }}
           cx_tenant: unico
           base_uri: https://ast.checkmarx.net/ 
-          cx_client_id: ${{ secrets.CXONE_ID }}
-          cx_client_secret: ${{ secrets.CX_APIKEY }}
+          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
