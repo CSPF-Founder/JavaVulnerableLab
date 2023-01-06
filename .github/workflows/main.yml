@@ -15,5 +15,5 @@ jobs:
           project_name: Nova8-Teste-GithubAction
           cx_tenant: unico
           base_uri: https://ast.checkmarx.net/ 
-          cx_client_id: GithubClient
-          cx_client_secret: qzUeuHUdV9mWgSoGOUDsp0JtnxdoTnyT
+          checkmarx_username: rodrigo.lino@nova-8.com
+          checkmarx_password: 1UE5Z2|A"bVs5N>Ab0a}
