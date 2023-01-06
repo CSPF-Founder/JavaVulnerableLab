@@ -15,4 +15,4 @@ jobs:
           project_name: Nova8-Teste-GithubAction
           cx_tenant: unico
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkZWE3NWU1NS0wM2Y3LTRmNTQtOWRjMi1mZTgxZGMxYWE4ZDQifQ.eyJpYXQiOjE2NzMwMjg1NDQsImp0aSI6IjhjNjA5NGUwLTJjYTktNDFiNy1hMDM4LTQyNTY5ZjVlZjExZiIsImlzcyI6Imh0dHBzOi8vaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvdW5pY28iLCJhdWQiOiJodHRwczovL2lhbS5jaGVja21hcngubmV0L2F1dGgvcmVhbG1zL3VuaWNvIiwic3ViIjoiMmJmODAwOWUtMTU2Yi00ZDUxLTliNWItZDg4NTZkMjc2OGExIiwidHlwIjoiT2ZmbGluZSIsImF6cCI6ImFzdC1hcHAiLCJzZXNzaW9uX3N0YXRlIjoiMWE1NGFkZDktZjk0Yi00OTY4LWFmODItZTdlMTJjNDc3ODQ0Iiwic2NvcGUiOiIgb2ZmbGluZV9hY2Nlc3MiLCJzaWQiOiIxYTU0YWRkOS1mOTRiLTQ5NjgtYWY4Mi1lN2UxMmM0Nzc4NDQifQ.Vt5SkF7UBq5bVsXKDkYNj5o6s_rGCiL_MqXcK61P8sU
+          additional_params: --apikey ${{ secrets.APIKEY }}
