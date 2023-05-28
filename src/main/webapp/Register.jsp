@@ -43,7 +43,7 @@
 <tr><td>UserName: </td><td><input type="text" name="username" id="username" /></td><td><span id="status"></span></td></tr>
 <tr><td>Email:</td><td><input type="text" name="email" id="email"/></td><td><span id="emailStatus"></span></td></tr>
 <tr><td>Describer Yourself:</td><td><input type="text" name="About" /></td></tr>
-<tr><td>What's Your Pet's name (DEVSECOP DEMO TEST)?:</td><td><input type="text" name="secret"  /></td></tr>
+<tr><td>What's Your Pet's name (DEVSECOP DEMO)?:</td><td><input type="text" name="secret"  /></td></tr>
 <tr><td>Password :</td><td><input type="password" name="password"/></td></tr>
 <tr><td><input type="submit" name="Register" value="Register"/></td></tr>
 </table>  
