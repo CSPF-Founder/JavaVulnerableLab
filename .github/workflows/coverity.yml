@@ -1,14 +1,14 @@
 name: Example Workflow
-on:
-  push:
-    branches:
-      - main
+#on:
+#  push:
+#    branches:
+#      - main
 #   schedule:
 #     - cron:  '0 0 * * *'
-jobs:
-  security:
-    runs-on: windows-latest
-    steps:
+#jobs:
+ # security:
+#    runs-on: windows-latest
+#    steps:
 #     - uses: actions/checkout@v2
 #    - name: Create Black Duck Policy
 #      env:
@@ -19,8 +19,8 @@ jobs:
 #        blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
 #        policy-name: 'My Black Duck Policy For GitHub Actions'
 #        no-fail-if-policy-exists: true
-    - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.3.0
+#    - name: Run Synopsys Detect
+#      uses: synopsys-sig/detect-action@v0.3.0
 #      env:
 #        NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
       with:
