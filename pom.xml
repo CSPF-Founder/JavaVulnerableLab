@@ -42,7 +42,7 @@
 </dependency>	 	
   </dependencies>
   <build>
-    <finalName>JavaVulnerableLab</finalName>
+    <finalName>GregandAJJavaVulnerableLab</finalName>
   </build>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
