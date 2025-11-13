@@ -52,6 +52,10 @@
         <servlet-name>xxe</servlet-name>
         <servlet-class>org.cysecurity.cspf.jvl.controller.xxe</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BlindSQLInjection</servlet-name>
+        <servlet-class>org.cysecurity.cspf.jvl.controller.BlindSQLInjection</servlet-class>
+    </servlet>
    
     <servlet-mapping>
         <servlet-name>Install</servlet-name>
@@ -100,6 +104,10 @@
    <servlet-mapping>
         <servlet-name>xxe</servlet-name>
         <url-pattern>/xxe.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlindSQLInjection</servlet-name>
+        <url-pattern>/BlindSQLInjection.do</url-pattern>
     </servlet-mapping>
    
 </web-app>

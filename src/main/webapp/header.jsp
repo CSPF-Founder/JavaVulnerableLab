@@ -32,6 +32,7 @@
 						  <li><a href="<%=path%>/vulnerability/forumposts.jsp?postid=1">Sql Injection 1</a></li>
 						  <li><a href="<%=path%>/login.jsp">Authentication Bypass</a></li>
 						  <li><a href="<%=path%>/vulnerability/sqli/download.jsp">Blind SQLi 1</a></li>
+						  <li><a href="<%=path%>/vulnerability/sqli/blind-injection.jsp">Blind SQLi 2</a></li>
                                                    <li><a href="<%=path%>/vulnerability/sqli/union2.jsp">Union 2</a></li>
                                                 </ul>
                                             </li>
