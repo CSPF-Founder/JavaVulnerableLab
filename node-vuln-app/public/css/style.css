@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { font: 14px/1.5 system-ui, sans-serif; margin: 0; color: #222; background: #f7f7f9; }
+main { max-width: 920px; margin: 20px auto; padding: 0 20px; }
+
+.topbar { display: flex; gap: 16px; align-items: center; padding: 10px 20px; background: #1a1a2e; color: #eee; }
+.topbar a { color: #eee; text-decoration: none; margin-right: 10px; }
+.topbar .brand { font-weight: bold; font-size: 16px; }
+.topbar nav { flex: 1; display: flex; gap: 10px; flex-wrap: wrap; }
+.topbar .auth { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+
+.bottombar { text-align: center; padding: 14px; color: #888; }
+
+h1, h2, h3 { margin: 16px 0 10px; }
+code, pre { font-family: ui-monospace, Menlo, monospace; }
+pre { background: #efefef; padding: 10px; overflow: auto; border-radius: 4px; }
+form { background: #fff; padding: 12px; border: 1px solid #ddd; border-radius: 6px; margin: 10px 0; }
+form label { display: block; margin: 6px 0; }
+input, textarea { width: 100%; padding: 6px; font: inherit; border: 1px solid #ccc; border-radius: 4px; }
+button { padding: 6px 14px; background: #1a1a2e; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+
+.hint { background: #fff8e1; border-left: 4px solid #e6b800; padding: 10px 14px; margin: 16px 0; border-radius: 4px; }
+.error { background: #fde2e2; color: #800; padding: 8px; border-radius: 4px; }
+.flash { background: #e2f3e2; color: #063; padding: 8px; border-radius: 4px; }
+.tag { background: #e0e0ff; color: #334; font-size: 11px; padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; }
+
+.messages { list-style: none; padding: 0; }
+.messages li { background: #fff; border: 1px solid #ddd; padding: 10px; margin: 8px 0; border-radius: 4px; }
+.messages .meta { color: #666; font-size: 12px; margin-bottom: 4px; }
+.filebody { white-space: pre-wrap; }

@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+<h2>Search messages <span class="tag">UNION SQLi</span></h2>
+
+<form method="get" action="/search">
+  <input name="q" value="<%= q %>" placeholder="search body" />
+  <button>Search</button>
+</form>
+
+<% if (sql) { %>
+  <p>Executed SQL:</p>
+  <pre><code><%= sql %></code></pre>
+<% } %>
+
+<% if (error) { %><p class="error"><%= error %></p><% } %>
+
+<% if (results && results.length) { %>
+  <table>
+    <thead><tr><th>id</th><th>author / col2</th><th>body / col3</th></tr></thead>
+    <tbody>
+    <% results.forEach(r => { %>
+      <tr><td><%= r.id %></td><td><%= r.author %></td><td><%= r.body %></td></tr>
+    <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+<div class="hint">
+  <h4>UNION-based SQLi exploit</h4>
+  <p>The search term is concatenated into a 3-column SELECT. Try:</p>
+  <pre><code>zzz' UNION SELECT id, username, password FROM users --</code></pre>
+  <p>Paste that into the search box (or use
+    <code>/search?q=zzz' UNION SELECT id, username, password FROM users --</code>)
+    and the user table comes back in the result rows.</p>
+</div>
+<%- include('partials/footer') %>

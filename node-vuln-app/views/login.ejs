@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<h2>Login</h2>
+
+<% if (error) { %><p class="error"><%= error %></p><% } %>
+
+<form method="post" action="/login">
+  <label>Username <input name="username" autofocus></label>
+  <label>Password <input name="password" type="password"></label>
+  <button type="submit">Log in</button>
+</form>
+
+<p><a href="/register">Register a new account</a></p>
+
+<div class="hint">
+  <h4>Try classic SQL injection</h4>
+  <p>Enter <code>admin' --</code> in the username and anything in the password.
+     The backend runs:</p>
+  <pre><code>SELECT id, username, role FROM users
+WHERE username = '{username}' AND password = '{password}'</code></pre>
+  <% if (query) { %>
+  <p>Last query executed:</p>
+  <pre><code><%= query %></code></pre>
+  <% } %>
+</div>
+<%- include('partials/footer') %>

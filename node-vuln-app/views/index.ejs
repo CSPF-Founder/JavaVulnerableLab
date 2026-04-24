@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+<h1>node-vuln-app</h1>
+<p>An intentionally vulnerable Node/Express training app. Each link below is a
+   deliberately broken endpoint; the view page for each explains the flaw and
+   provides an exploit example.</p>
+
+<section class="cards">
+  <div class="card">
+    <h3>SQL Injection</h3>
+    <ul>
+      <li><b>Classic (auth bypass):</b> POST <code>/login</code> with <code>username=admin' --</code></li>
+      <li><b>UNION-based:</b> <a href="/search?q=">/search</a></li>
+      <li><b>Blind (boolean):</b> <a href="/account/check?name=admin">/account/check</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Cross-Site Scripting</h3>
+    <ul>
+      <li><b>Reflected:</b> <a href="/hello?greet=hi">/hello</a></li>
+      <li><b>Stored:</b> <a href="/messages">/messages</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>CSRF</h3>
+    <ul>
+      <li><b>Profile email change:</b> POST <code>/profile/update</code></li>
+      <li><b>Password change:</b> POST <code>/profile/password</code></li>
+    </ul>
+    <p>See the README for a drop-in attacker page.</p>
+  </div>
+  <div class="card">
+    <h3>IDOR</h3>
+    <ul>
+      <li><b>File by id:</b> <a href="/file?id=1">/file?id=1</a></li>
+      <li><b>User by id:</b> <a href="/user/1">/user/1</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h3>Demo accounts (plaintext passwords on purpose)</h3>
+  <ul>
+    <li><code>admin / admin123</code></li>
+    <li><code>alice / wonderland</code></li>
+    <li><code>bob / builder</code></li>
+    <li><code>carol / carolpass</code></li>
+  </ul>
+</section>
+<%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>node-vuln-app</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <a href="/" class="brand">node-vuln-app</a>
+  <nav>
+    <a href="/search?q=">Search (SQLi)</a>
+    <a href="/account/check?name=admin">Blind SQLi</a>
+    <a href="/hello?greet=hi">Hello (XSS)</a>
+    <a href="/messages">Messages (XSS)</a>
+    <a href="/profile">Profile (CSRF)</a>
+    <a href="/files">Files (IDOR)</a>
+  </nav>
+  <div class="auth">
+    <% if (user) { %>
+      <span>logged in as <b><%= user.username %></b> (<%= user.role %>)</span>
+      <a href="/logout">logout</a>
+    <% } else { %>
+      <a href="/login">login</a>
+      <a href="/register">register</a>
+    <% } %>
+  </div>
+</header>
+<main>

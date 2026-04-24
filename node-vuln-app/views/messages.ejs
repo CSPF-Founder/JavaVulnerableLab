@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<h2>Messages <span class="tag">Stored XSS</span></h2>
+
+<% if (user) { %>
+<form method="post" action="/messages">
+  <textarea name="body" rows="3" placeholder="say something..."></textarea>
+  <button>Post</button>
+</form>
+<% } else { %>
+  <p><a href="/login">Log in</a> to post.</p>
+<% } %>
+
+<ul class="messages">
+  <% messages.forEach(m => { %>
+    <li>
+      <div class="meta"><b><%= m.author %></b> — <%= m.created_at %></div>
+      <div class="body"><%- m.body %></div>
+    </li>
+  <% }) %>
+</ul>
+
+<div class="hint">
+  <h4>Stored XSS</h4>
+  <p>Message bodies are rendered as raw HTML. Log in and post:</p>
+  <pre><code>&lt;img src=x onerror="alert('stored-xss: '+document.cookie)"&gt;</code></pre>
+  <p>Every subsequent visitor fires the payload.</p>
+</div>
+<%- include('partials/footer') %>

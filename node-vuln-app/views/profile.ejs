@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<h2>My profile <span class="tag">CSRF</span></h2>
+
+<% if (flash) { %><p class="flash"><%= flash %></p><% } %>
+
+<p><b>Username:</b> <%= profile.username %> (role: <%= profile.role %>)</p>
+
+<form method="post" action="/profile/update">
+  <label>Email <input name="email" value="<%= profile.email %>"></label>
+  <label>Bio <input name="bio" value="<%= profile.bio || '' %>"></label>
+  <button>Update</button>
+</form>
+
+<form method="post" action="/profile/password">
+  <label>New password <input name="password" type="text" placeholder="new password"></label>
+  <button>Change password</button>
+</form>
+
+<div class="hint">
+  <h4>CSRF</h4>
+  <p>Neither form uses a CSRF token and the session cookie has no SameSite.
+     An attacker page can auto-submit a cross-origin form while the victim is
+     logged in. See README "CSRF walkthrough" for a drop-in attacker page.</p>
+</div>
+<%- include('partials/footer') %>
