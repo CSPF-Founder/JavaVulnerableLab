@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<h2>Account existence check <span class="tag">Blind SQLi</span></h2>
+
+<form method="get" action="/account/check">
+  <input name="name" value="<%= name %>" />
+  <button>Check</button>
+</form>
+
+<p>Query run:</p>
+<pre><code><%= sql %></code></pre>
+<p class="result"><b><%= message %></b></p>
+
+<div class="hint">
+  <h4>Boolean-blind exploit</h4>
+  <p>The response text differs depending on whether the WHERE clause matched a
+     row. Use that oracle to leak the admin password one character at a time:</p>
+  <pre><code>/account/check?name=admin' AND substr(password,1,1)='a' --</code></pre>
+  <p>"Account exists." means the guessed character was right. Script the scan
+     over positions 1..N and the alphabet.</p>
+</div>
+<%- include('partials/footer') %>

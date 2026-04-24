@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+<h2>Hello page <span class="tag">Reflected XSS</span></h2>
+
+<form method="get" action="/hello">
+  <input name="greet" value="<%= greet %>" />
+  <button>Say it</button>
+</form>
+
+<p class="greeting">Greeting: <%- greet %></p>
+
+<div class="hint">
+  <h4>Reflected XSS</h4>
+  <p>The <code>greet</code> parameter is rendered raw. Try:</p>
+  <pre><code>/hello?greet=&lt;script&gt;alert(document.cookie)&lt;/script&gt;</code></pre>
+</div>
+<%- include('partials/footer') %>

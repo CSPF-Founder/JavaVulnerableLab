@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<h2>User #<%= profile.id %>: <%= profile.username %></h2>
+<ul>
+  <li>Email: <%= profile.email %></li>
+  <li>Role: <%= profile.role %></li>
+  <li>Bio: <%= profile.bio %></li>
+</ul>
+<p class="hint">No session check — any id works.</p>
+<%- include('partials/footer') %>

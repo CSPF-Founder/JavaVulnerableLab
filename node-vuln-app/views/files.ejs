@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<h2>My files <span class="tag">IDOR</span></h2>
+
+<ul>
+<% mine.forEach(f => { %>
+  <li><a href="/file?id=<%= f.id %>"><%= f.filename %></a> (id=<%= f.id %>)</li>
+<% }) %>
+</ul>
+
+<div class="hint">
+  <h4>IDOR</h4>
+  <p>File ids are sequential integers and <code>/file?id=N</code> does no
+     ownership check. Try pasting a neighbour's id directly:</p>
+  <pre><code>/file?id=1</code></pre>
+  <p>(That one is admin-notes.txt regardless of who's logged in.)</p>
+</div>
+<%- include('partials/footer') %>
