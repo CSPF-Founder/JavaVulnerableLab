@@ -74,29 +74,12 @@
 		<artifactId>commons-io</artifactId>
 		<version>2.6</version>
 	</dependency>
-	<!-- Build-environment fix, not a vulnerability fix: javax.xml.bind (JAXB) was
-	     bundled in the JDK through Java 8 and removed in 11+. preferences.jsp and
-	     JwtUtil.java both import it. Restoring it as an explicit dependency lets
-	     the project build on a modern JDK without changing the app's own code. -->
-	<dependency>
-		<groupId>javax.xml.bind</groupId>
-		<artifactId>jaxb-api</artifactId>
-		<version>2.3.1</version>
-	</dependency>
-	<dependency>
-		<groupId>org.glassfish.jaxb</groupId>
-		<artifactId>jaxb-runtime</artifactId>
-		<version>2.3.1</version>
-	</dependency>
   </dependencies>
   <build>
     <finalName>JavaVulnerableLab</finalName>
   </build>
     <properties>
-        <!-- Bumped from 1.7: build-environment fix so this compiles on a modern
-             JDK (source/target 7 was removed by javac in later JDK releases).
-             Not a vulnerability fix, doesn't change any finding in this repo. -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 </project>
