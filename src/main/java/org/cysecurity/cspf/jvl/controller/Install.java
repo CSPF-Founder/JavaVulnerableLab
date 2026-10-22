@@ -172,13 +172,13 @@ public class Install extends HttpServlet {
                    }
                    catch(SQLException ex)
                    {
-                      System.out.println("SQLException: " + ex.getMessage());
-                     System.out.println("SQLState: " + ex.getSQLState());
-                     System.out.println("VendorError: " + ex.getErrorCode());
+                       IO.println("SQLException: " + ex.getMessage());
+                       IO.println("SQLState: " + ex.getSQLState());
+                       IO.println("VendorError: " + ex.getErrorCode());
                    }
                    catch(ClassNotFoundException ex)
                    {
-                       System.out.print("JDBC Driver Missing:<br/>"+ex);
+                       IO.print("JDBC Driver Missing:<br/>" + ex);
                    }
       
        }

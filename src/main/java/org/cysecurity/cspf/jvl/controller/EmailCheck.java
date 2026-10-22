@@ -52,7 +52,7 @@ public class EmailCheck extends HttpServlet {
                     }  
                     else
                     {  
-                      json.put("available", new Integer(0));  
+                      json.put("available", Integer.valueOf(0));  
                     }  
                 }
                 out.print(json);
